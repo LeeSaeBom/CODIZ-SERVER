@@ -59,7 +59,10 @@ public class ProblemFrame {
         IF,
         WHILE,
         FOR,
-        ARRAY
+        ARRAY,
+        FUNCTION,
+        ONE_DIMENSION_ARRAY,
+        MULTI_DIMENSION_ARRAY
     }
 
     @Override
