@@ -1,5 +1,7 @@
 package com.gachon.codiz.configuration;
 
+import com.gachon.codiz.repository.GrammerRepository;
+import com.gachon.codiz.service.GrammerService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -29,5 +31,10 @@ public class ServiceConfiguration {
     public ProblemFrameService problemFrameService(ProblemFrameRepository problemFrameRepository,
                                                    ProblemService problemService) {
         return new ProblemFrameService(problemFrameRepository, problemService);
+    }
+
+    @Bean
+    public GrammerService grammerService(GrammerRepository grammerRepository){
+        return new GrammerService(grammerRepository);
     }
 }
