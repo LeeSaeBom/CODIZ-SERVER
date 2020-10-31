@@ -61,6 +61,8 @@ public class Grammer {
     }
 
     public enum GrammerType {
-        CONDITIONAL, ITERATION, FUNCTION
+        CONDITIONAL,
+        ITERATION,
+        FUNCTION
     }
 }
