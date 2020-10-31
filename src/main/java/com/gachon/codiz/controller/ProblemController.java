@@ -2,11 +2,7 @@ package com.gachon.codiz.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.gachon.codiz.domain.ProblemFrame.ProblemType;
 import com.gachon.codiz.model.ProblemCreateResponse;
@@ -17,6 +13,7 @@ import com.gachon.codiz.model.ProblemFrameResponse;
 import com.gachon.codiz.model.ProblemPutRequest;
 import com.gachon.codiz.service.ProblemFrameService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path = "/problem", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 public class ProblemController {
