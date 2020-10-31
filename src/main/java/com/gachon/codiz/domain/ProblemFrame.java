@@ -61,7 +61,15 @@ public class ProblemFrame {
         FOR,
         FUNCTION,
         ONE_DIMENSION_ARRAY,
-        MULTI_DIMENSION_ARRAY
+        MULTI_DIMENSION_ARRAY,
+        INPUT_OUTPUT,
+        VARIABLE_DATATYPE,
+        STRING,
+        STRUCTURE,
+        RECURSIVE,
+        SORT,
+        BACKTRACKING,
+        DYNAMIC_PROGRAMMING
     }
 
     @Override

@@ -46,6 +46,15 @@
         <option value="FUNCTION">FUNCTION</option>
         <option value="ONE_DIMENSION_ARRAY">ONE_DIMENSION_ARRAY</option>
         <option value="MULTI_DIMENSION_ARRAY">MULTI_DIMENSION_ARRAY</option>
+        <option value="INPUT_OUTPUT">INPUT_OUTPUT</option>
+        <option value="VARIABLE_DATATYPE">VARIABLE_DATATYPE</option>
+        <option value="STRING">STRING</option>
+        <option value="STRUCTURE">STRUCTURE</option>
+        <option value="RECURSIVE">RECURSIVE</option>
+        <option value="SORT">SORT</option>
+        <option value="BACKTRACKING">BACKTRACKING</option>
+        <option value="DYNAMIC_PROGRAMMING">DYNAMIC_PROGRAMMING</option>
+
     </select>
     <p>문제 프레임 이름 :</p> <input type="text" id="problemName">
     <p>문제 프레임 설명 :</p> <textarea cols="50" rows="10" id="problemFrameDescription"></textarea>
@@ -72,7 +81,7 @@
             $.ajax({
                 url: "http://192.168.0.2:8080/problem/put",
                 data: JSON.stringify({
-                    problem :{
+                    problem: {
                         problemId: problemId,
                         problemDescription: problemFrameDescription,
                         problemType: problemType,
@@ -104,6 +113,14 @@
         <option value="FUNCTION">FUNCTION</option>
         <option value="ONE_DIMENSION_ARRAY">ONE_DIMENSION_ARRAY</option>
         <option value="MULTI_DIMENSION_ARRAY">MULTI_DIMENSION_ARRAY</option>
+        <option value="INPUT_OUTPUT">INPUT_OUTPUT</option>
+        <option value="VARIABLE_DATATYPE">VARIABLE_DATATYPE</option>
+        <option value="STRING">STRING</option>
+        <option value="STRUCTURE">STRUCTURE</option>
+        <option value="RECURSIVE">RECURSIVE</option>
+        <option value="SORT">SORT</option>
+        <option value="BACKTRACKING">BACKTRACKING</option>
+        <option value="DYNAMIC_PROGRAMMING">DYNAMIC_PROGRAMMING</option>
     </select>
     <p>문제 프레임 번호 :</p> <input type="text" id="problemFrameId">
     <p>문제 이름 :</p> <input type="text" id="problemPutName">
