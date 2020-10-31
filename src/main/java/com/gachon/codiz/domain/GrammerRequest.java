@@ -8,7 +8,7 @@ public class GrammerRequest {
     private final Grammer grammer;
 
     @JsonCreator
-    public GrammerRequest(@JsonProperty("gramer") Grammer grammer) {
+    public GrammerRequest(@JsonProperty("grammer") Grammer grammer) {
         this.grammer = grammer;
     }
 

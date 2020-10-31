@@ -61,8 +61,15 @@ public class Grammer {
     }
 
     public enum GrammerType {
+        BASIC,
+        VARIABLE_DATATYPE,
+        OPERATION,
         CONDITIONAL,
         ITERATION,
-        FUNCTION
+        ARRAY,
+        FUNCTION,
+        POINTER,
+        STRING,
+        STRUCTURE
     }
 }
