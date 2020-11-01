@@ -21,7 +21,7 @@
 
 
             $.ajax({
-                url: "http://192.168.0.2:8080/problem/create",
+                url: "http://192.168.0.7:8080/problem/create",
                 data: JSON.stringify({
                     problemFrameDescription: problemFrameDescription,
                     problemType: problemType,
@@ -79,7 +79,7 @@
             let problemFourDescription = $("#problemFourDescription").val()
 
             $.ajax({
-                url: "http://192.168.0.2:8080/problem/put",
+                url: "http://192.168.0.7:8080/problem/put",
                 data: JSON.stringify({
                     problem: {
                         problemId: problemId,
