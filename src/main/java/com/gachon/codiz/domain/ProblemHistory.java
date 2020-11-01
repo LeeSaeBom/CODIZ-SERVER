@@ -13,8 +13,8 @@ public class ProblemHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "user_id", length = 25)
+    private String userId;
 
     @Column(name = "problem_name", length = 25)
     private String problemName;
@@ -32,7 +32,7 @@ public class ProblemHistory {
     }
 
     @JsonCreator
-    public ProblemHistory(@JsonProperty("userId") long userId,
+    public ProblemHistory(@JsonProperty("userId") String userId,
                           @JsonProperty("problemName") String problemName,
                           @JsonProperty("problemId") long problemId,
                           @JsonProperty("problemType") ProblemFrame.ProblemType problemType,
@@ -48,7 +48,7 @@ public class ProblemHistory {
         return id;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 

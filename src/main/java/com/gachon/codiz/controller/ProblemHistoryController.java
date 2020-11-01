@@ -1,6 +1,7 @@
 package com.gachon.codiz.controller;
 
 import com.gachon.codiz.domain.ProblemHistory;
+import com.gachon.codiz.model.ProblemHistoryResponse;
 import com.gachon.codiz.service.ProblemHistoryService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,8 @@ public class ProblemHistoryController {
     }
 
     @RequestMapping(path = "/history/{userId}", method = RequestMethod.GET)
-    public List<ProblemHistory> histories(@PathVariable("userId") long userId) {
-        return problemHistoryService.findAll(userId);
+    public ProblemHistoryResponse histories(@PathVariable("userId") String userId) {
+        return new ProblemHistoryResponse(problemHistoryService.findAll(userId));
     }
 
     @RequestMapping(path = "/history", method = RequestMethod.POST)

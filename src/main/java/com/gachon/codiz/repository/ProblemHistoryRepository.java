@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ProblemHistoryRepository extends CrudRepository<ProblemHistory, Long> {
 
-    List<ProblemHistory> findAllByUserId(long userId);
+    List<ProblemHistory> findAllByUserId(String userId);
 }

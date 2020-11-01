@@ -13,7 +13,7 @@ public class ProblemHistoryService {
         this.problemHistoryRepository = problemHistoryRepository;
     }
 
-    public List<ProblemHistory> findAll(long userId) {
+    public List<ProblemHistory> findAll(String userId) {
         return problemHistoryRepository.findAllByUserId(userId);
     }
 
