@@ -31,17 +31,22 @@ public class User {
     @Column(name = "user_password", length = 25)
     private String userPassword;
 
+    @Column(name = "user_score")
+    private Long userScore;
+
     private User() { }
 
     @JsonCreator
     public User(@JsonProperty("userName") String userName,
                 @JsonProperty("userId") String userId,
                 @JsonProperty("userEmail") String userEmail,
-                @JsonProperty("userPassword") String userPassword) {
+                @JsonProperty("userPassword") String userPassword,
+                @JsonProperty("userScore") Long userScore) {
         this.userName = userName;
         this.userId = userId;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
+        this.userScore = userScore;
     }
 
     public Long getId() {
@@ -64,6 +69,14 @@ public class User {
         return userPassword;
     }
 
+    public Long getUserScore() {
+        return userScore;
+    }
+
+    public void addScore(Long score) {
+        this.userScore += score;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -72,6 +85,7 @@ public class User {
                ", userId='" + userId + '\'' +
                ", userEmail='" + userEmail + '\'' +
                ", userPassword='" + userPassword + '\'' +
+               ", userScore=" + userScore +
                '}';
     }
 }

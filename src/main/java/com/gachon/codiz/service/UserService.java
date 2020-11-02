@@ -1,5 +1,7 @@
 package com.gachon.codiz.service;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +36,22 @@ public class UserService {
         logger.info("user = {}", findUser);
         if (!findUser.getUserPassword().equals(password)) {
             throw new InvalidPasswordException("비밀번호가 맞지 않습니다.");
+        }
+    }
+
+    public void update(String userId) {
+        Optional<User> optUser = userRepository.findByUserId(userId);
+        if (optUser.isPresent()) {
+            userRepository.save(optUser.get());
+        }
+    }
+
+    public void updateScore(String userId, long score) {
+        Optional<User> optUser = userRepository.findByUserId(userId);
+        if (optUser.isPresent()) {
+            User user = optUser.get();
+            user.addScore(score);
+            userRepository.save(user);
         }
     }
 }
