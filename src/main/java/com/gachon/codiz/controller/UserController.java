@@ -38,6 +38,11 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    @RequestMapping(path = "/user/{userId}", method = RequestMethod.GET)
+    public ResponseEntity<User> update(@PathVariable(name = "userId") String userId) {
+        return ResponseEntity.ok(userService.findByUserid(userId));
+    }
+
     @RequestMapping(path = "/update/{userId}", method = RequestMethod.PUT)
     public ResponseEntity update(@PathVariable(name = "userId") String userId,
                                  @RequestBody User user) {

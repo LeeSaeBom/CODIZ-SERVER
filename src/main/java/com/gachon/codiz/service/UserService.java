@@ -39,6 +39,10 @@ public class UserService {
         }
     }
 
+    public User findByUserid(String userId) {
+        return userRepository.findByUserId(userId).get();
+    }
+
     public void update(String userId, User user) {
         Optional<User> optUser = userRepository.findByUserId(userId);
         if (optUser.isPresent()) {
