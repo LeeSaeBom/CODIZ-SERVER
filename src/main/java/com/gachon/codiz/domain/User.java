@@ -73,6 +73,26 @@ public class User {
         return userScore;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public void setUserScore(Long userScore) {
+        this.userScore = userScore;
+    }
+
     public void addScore(Long score) {
         this.userScore += score;
     }

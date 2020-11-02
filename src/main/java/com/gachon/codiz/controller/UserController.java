@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gachon.codiz.domain.User;
 import com.gachon.codiz.model.SignInRequest;
 import com.gachon.codiz.model.SignUpRequest;
 import com.gachon.codiz.model.UserScoreUpdateRequest;
@@ -38,8 +39,9 @@ public class UserController {
     }
 
     @RequestMapping(path = "/update/{userId}", method = RequestMethod.PUT)
-    public ResponseEntity update(@PathVariable(name = "userId") String userId) {
-        userService.update(userId);
+    public ResponseEntity update(@PathVariable(name = "userId") String userId,
+                                 @RequestBody User user) {
+        userService.update(userId, user);
         return ResponseEntity.noContent().build();
     }
 

@@ -39,10 +39,15 @@ public class UserService {
         }
     }
 
-    public void update(String userId) {
+    public void update(String userId, User user) {
         Optional<User> optUser = userRepository.findByUserId(userId);
         if (optUser.isPresent()) {
-            userRepository.save(optUser.get());
+            User oUser = optUser.get();
+            oUser.setUserEmail(user.getUserEmail());
+            oUser.setUserId(user.getUserId());
+            oUser.setUserName(user.getUserName());
+            oUser.setUserPassword(user.getUserPassword());
+            userRepository.save(oUser);
         }
     }
 
