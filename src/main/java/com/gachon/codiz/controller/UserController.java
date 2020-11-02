@@ -38,7 +38,7 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    @RequestMapping(path = "/user/{userId}", method = RequestMethod.GET)
+    @RequestMapping(path = "/{userId}", method = RequestMethod.GET)
     public ResponseEntity<User> update(@PathVariable(name = "userId") String userId) {
         return ResponseEntity.ok(userService.findByUserid(userId));
     }
